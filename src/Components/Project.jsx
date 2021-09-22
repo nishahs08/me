@@ -1,18 +1,28 @@
 import * as React from 'react';
-import { Button, CardActionArea, CardActions, IconButton,Card,CardContent,CardMedia,Typography } from '@mui/material';
+import {
+	Button,
+	CardActionArea,
+	CardActions,
+	IconButton,
+	Card,
+	CardContent,
+	CardMedia,
+	Typography,
+	Box,
+} from '@mui/material';
 import GitHub from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
 
+import LanguageIcon from '@mui/icons-material/Language';
 
 export const Project = ({ project }) => {
-  const {title,src} =project;
-  console.log(project)
+	const { title, src } = project;
+	console.log(project);
 	return (
-
-		<Card sx={{ maxWidth: 345, background: '#EFEFEF' }}>
+		<Card sx={{ maxWidth: 445, background: '#EFEFEF' }}>
 			<CardActionArea>
-				<CardMedia component='img' height='240' image={src} alt='img' width='100%' height='100%' />
+				<CardMedia height='200' alt='img' width='100%'>
+					<img src={project.src} style={{ width: '100%', height: '300px' }} />
+				</CardMedia>
 				<CardContent>
 					<Typography gutterBottom variant='h5' component='div'>
 						{title}
@@ -27,12 +37,10 @@ export const Project = ({ project }) => {
 					<GitHub />
 				</IconButton>
 				<IconButton>
-					<LinkedInIcon />
-				</IconButton>
-				<IconButton>
-					<EmailIcon />
+					<LanguageIcon />
 				</IconButton>
 
+				<Box style={{ flexGrow: 1 }} />
 				<Button size='small' color='primary'>
 					Read More
 				</Button>

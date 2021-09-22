@@ -71,7 +71,7 @@ export const TimeLine = () => {
 						height: '100%',
 					}}
 				>
-					<Timeline variant='outlined' >
+					<Timeline variant='outlined'>
 						{timeline.map((item, index) => (
 							<TimelineItem>
 								<TimelineOppositeContent color='text.secondary'>{item.year}</TimelineOppositeContent>
